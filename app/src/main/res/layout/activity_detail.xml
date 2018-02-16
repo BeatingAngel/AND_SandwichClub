@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/detail_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/label_to_value_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- =============   ALSO KNOWN AS   ============= -->
+
+        <TextView
+            android:id="@+id/also_known_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginTop="@dimen/top_margin_to_image"
+            android:text="@string/detail_also_known_as_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_iv" />
+
+        <TextView
+            android:id="@+id/also_known_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_to_value_guideline"
+            app:layout_constraintTop_toTopOf="@+id/also_known_label_tv" />
+
+        <!-- =============       ORIGIN       ============= -->
+
+        <TextView
+            android:id="@+id/origin_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginTop="@dimen/top_margin_to_another_label"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv" />
+
+        <TextView
+            android:id="@+id/origin_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/label_to_value_guideline"
+            app:layout_constraintTop_toTopOf="@+id/origin_label_tv" />
+
+        <!-- =============    INGREDIENTS    ============= -->
+
+        <TextView
+            android:id="@+id/ingredients_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginTop="@dimen/top_margin_to_another_label"
+            android:text="@string/detail_ingredients_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv" />
+
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/label_to_value_guideline"
+            app:layout_constraintTop_toTopOf="@+id/ingredients_label_tv" />
+
+        <!-- =============    DESCRIPTION    ============= -->
+
+        <TextView
+            android:id="@+id/description_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginTop="@dimen/top_margin_to_another_label"
+            android:text="@string/detail_description_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_tv" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/border_margin_to_screen_for_label"
+            android:layout_marginStart="@dimen/border_margin_to_screen_for_label"
+            android:paddingBottom="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/label_to_value_guideline"
+            app:layout_constraintTop_toTopOf="@+id/description_label_tv" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
